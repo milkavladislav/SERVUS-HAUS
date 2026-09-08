@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schlüsselfertige Häuser in Bayern | SERVUS HAUS</title>
+  <meta name="description" content="Moderne Häuser mit 120, 160 oder 220 m²: individuell geplant, energieeffizient und schlüsselfertig ab ca. 2.900 €/m². Jetzt Haus-Check anfragen.">
+  <link rel="preload" as="image" href="images/hero.png" type="image/png" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SHVETS BAU GmbH",
+    "alternateName": "SERVUS HAUS",
+    "url": "https://servus-haus.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mühlengasse 8",
+      "postalCode": "91332",
+      "addressLocality": "Heiligenstadt i.OFr.",
+      "addressCountry": "DE"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">SERVUS HAUS</a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="tel:+4915110173628" class="nav-link phone" data-cta="phone_click">+49 151 10173628</a>
+        <a href="#modelle" class="nav-link" data-cta="nav_modelle">Modelle</a>
+        <a href="#vorteile" class="nav-link" data-cta="nav_vorteile">Vorteile</a>
+        <a href="#ablauf" class="nav-link" data-cta="nav_ablauf">Ablauf</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="tel:+4915110173628" data-cta="phone_click">+49 151 10173628</a>
+      <a href="#modelle" data-cta="nav_modelle">Modelle</a>
+      <a href="#vorteile" data-cta="nav_vorteile">Vorteile</a>
+      <a href="#ablauf" data-cta="nav_ablauf">Ablauf</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-h1">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="kicker">SCHLÜSSELFERTIGE HÄUSER IN BAYERN</span>
+          <h1 id="hero-h1">Ihr neues Zuhause. In ca. 3 Monaten gebaut.*</h1>
+          <p class="hero-sub">120, 160 oder 220 m². Energieeffizient, individuell geplant und schlüsselfertig ab ca. 2.900 €/m².</p>
+          <ul class="hero-bullets">
+            <li>Kurze Bauphase</li>
+            <li>Niedrige Energiekosten</li>
+            <li>Alles aus einer Hand</li>
+          </ul>
+          <div class="hero-ctas">
+            <a href="#anfrage" class="btn btn-primary" data-cta="hero_hauscheck" data-set-size="">Kostenlosen Haus-Check starten</a>
+            <a href="#modelle" class="btn btn-secondary" data-cta="hero_modelle">Modelle ansehen</a>
+          </div>
+          <p class="note">*Ab Baustart bei vollständigen Grundstücks- und Genehmigungsunterlagen, bestätigter Ausführung, erfüllten Zahlungsvoraussetzungen und gesicherter Baustellenbereitschaft.</p>
+
+
+        </div>
+        <div class="hero-image">
+          <img src="images/hero.png" alt="Visualisierung eines modernen Einfamilienhauses in Bayern" width="1448" height="1086" fetchpriority="high" decoding="async">
+          <span class="image-label">Visualisierung</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <form class="short-form" id="short-form" action="/api/submit" method="post" novalidate>
+        <p class="short-form-title">Was darf Ihr neues Zuhause können?</p>
+        <div class="short-form-row">
+          <label class="visually-hidden" for="sf-groesse">Hausgröße</label>
+          <select id="sf-groesse" name="groesse" required>
+            <option value="" disabled selected>Hausgröße</option>
+            <option value="120 m²">120 m²</option>
+            <option value="160 m²">160 m²</option>
+            <option value="220 m²">220 m²</option>
+            <option value="Individuell">Individuell</option>
+          </select>
+          <label class="visually-hidden" for="sf-plz">PLZ des Grundstücks</label>
+          <input type="text" id="sf-plz" name="plz" inputmode="numeric" pattern="\d{5}" placeholder="PLZ des Grundstücks" required>
+          <label class="visually-hidden" for="sf-kontakt">Telefon oder E-Mail</label>
+          <input type="text" id="sf-kontakt" name="kontakt" placeholder="Telefon oder E-Mail" required>
+          <input type="hidden" name="source" value="Short-Form Hero">
+          <input type="hidden" name="utm" class="utm-field">
+          <input type="hidden" name="url" class="url-field">
+          <button type="submit" class="btn btn-primary" data-cta="short_form_submit">Unverbindlich beraten lassen</button>
+        </div>
+        <p class="form-message" role="status" aria-live="polite" hidden></p>
+      </form>
+      </div>
+    </section>
+
+    <section class="sip" id="vorteile" aria-labelledby="sip-heading">
+      <div class="container">
+        <h2 id="sip-heading">Schnell aufgebaut. Angenehm warm. Für viele Jahre geplant.</h2>
+        <p class="lead">Vorgefertigte Bauelemente verkürzen die Montage und schaffen eine gleichmäßig gedämmte, gut abgedichtete Gebäudehülle.</p>
+        <figure class="sip-section-fig">
+          <img src="images/sip-section.png" alt="Schematischer Aufbau eines SIP-Elements" width="1448" height="1086" loading="lazy" decoding="async">
+          <figcaption>Schematischer Aufbau eines SIP-Elements</figcaption>
+        </figure>
+        <div class="cards-grid six">
+          <article class="card">
+            <h3>Schnell aufgebaut</h3>
+            <p>Vorgefertigte Elemente reduzieren viele Arbeitsschritte auf der Baustelle.</p>
+          </article>
+          <article class="card">
+            <h3>Weniger Wärmeverlust</h3>
+            <p>Die nahezu durchgehende Dämmschicht reduziert Wärmebrücken.</p>
+          </article>
+          <article class="card">
+            <h3>Mehr Ruhe</h3>
+            <p>Der mehrschichtige Aufbau und gedämmte Decken können Außen- und Alltagsgeräusche spürbar dämpfen.</p>
+          </article>
+          <article class="card">
+            <h3>Geprüfter Brandschutz</h3>
+            <p>Der Nachweis erfolgt für den vollständigen Wand- und Deckenaufbau.</p>
+          </article>
+          <article class="card">
+            <h3>Langlebig geplant</h3>
+            <p>Statik, dichte Anschlüsse und Feuchteschutz werden auf das konkrete Haus abgestimmt.</p>
+          </article>
+          <article class="card">
+            <h3>Mehr Wohnkomfort</h3>
+            <p>Dichte, gedämmte Hülle und raumweise regelbare Wärme sorgen für angenehmes Raumklima.</p>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="#anfrage" class="btn btn-primary" data-cta="sip_vorteile">Vorteile für mein Projekt prüfen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="models" id="modelle" aria-labelledby="models-heading">
+      <div class="container">
+        <h2 id="models-heading">Welches Zuhause passt zu Ihrem Leben?</h2>
+        <div class="cards-grid three">
+          <article class="model-card" data-size="120 m²">
+            <div class="model-img"><img src="images/model-120.png" alt="Visualisierung SERVUS 120" width="1448" height="1086" loading="lazy" decoding="async"><span class="image-label">Visualisierung</span></div>
+            <h3>SERVUS 120</h3>
+            <p class="model-size">120 m²</p>
+            <p class="model-desc">Kompakt, modern und ideal für Paare oder kleine Familien.</p>
+            <p class="model-price">Ab ca. 348.000 €</p>
+            <a href="#anfrage" class="btn btn-secondary" data-cta="model_120" data-set-size="120 m²">Mein Modell berechnen lassen</a>
+          </article>
+          <article class="model-card popular" data-size="160 m²">
+            <div class="model-img"><img src="images/model-160.png" alt="Visualisierung SERVUS 160" width="1448" height="1086" loading="lazy" decoding="async"><span class="image-label">Visualisierung</span><span class="badge">Beliebt</span></div>
+            <h3>SERVUS 160</h3>
+            <p class="model-size">160 m²</p>
+            <p class="model-desc">Viel Platz für die Familie: 3 Schlafzimmer, Büro, Ankleide, 2 Bäder und offener Wohnbereich.</p>
+            <p class="model-price">Ab ca. 464.000 €</p>
+            <a href="#anfrage" class="btn btn-secondary" data-cta="model_160" data-set-size="160 m²">Mein Modell berechnen lassen</a>
+          </article>
+          <article class="model-card" data-size="220 m²">
+            <div class="model-img"><img src="images/model-220.png" alt="Visualisierung SERVUS 220" width="1448" height="1086" loading="lazy" decoding="async"><span class="image-label">Visualisierung</span></div>
+            <h3>SERVUS 220</h3>
+            <p class="model-size">220 m²</p>
+            <p class="model-desc">Großzügiges Wohnen mit vielen Möglichkeiten.</p>
+            <p class="model-price">Ab ca. 638.000 €</p>
+            <a href="#anfrage" class="btn btn-secondary" data-cta="model_220" data-set-size="220 m²">Mein Modell berechnen lassen</a>
+          </article>
+        </div>
+        <p class="models-note">Auch individuelle Bungalows, Anbauten, Ferienhäuser und kleinere Anlagen auf Anfrage.</p>
+        <p class="note">Richtpreise bei ca. 2.900 €/m². Grundstück, Baunebenkosten und individuelle Extras separat. Flächen- und Preisberechnung gemäß finalem Angebot.</p>
+      </div>
+    </section>
+
+    <section class="all-in-one" id="leistungen" aria-labelledby="allinone-heading">
+      <div class="container">
+        <h2 id="allinone-heading">Ein Partner. Ein klarer Weg. Ihr Haus.</h2>
+        <p class="lead">SHVETS BAU GmbH koordiniert Planung, Fachpartner, Bau und Ausstattung — abgestimmt auf Ihr Grundstück und Ihr Budget.</p>
+        <div class="two-col">
+          <div>
+            <h3>Wir koordinieren</h3>
+            <ul>
+              <li>Grundstücks-Check</li>
+              <li>Architekt</li>
+              <li>Statik</li>
+              <li>Energieberatung</li>
+              <li>Genehmigungsunterlagen</li>
+              <li>Bau und Übergabe</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Sie wählen</h3>
+            <ul>
+              <li>Grundriss</li>
+              <li>Dach</li>
+              <li>Fassade</li>
+              <li>Haustür</li>
+              <li>Fenster</li>
+              <li>Ausstattung und passender Wandaufbau</li>
+            </ul>
+          </div>
+        </div>
+        <div class="scope-box">
+          <h3>Im Richtpreis vorgesehen</h3>
+          <p>Fundament, Tragwerk und Wände, gedämmtes Dach, Fenster und Türen, Fassade, Elektro, Wasser/Abwasser, Wärmepumpe, Fußbodenheizung, Boden- und Deckenfinish sowie Basissanitär — gemäß finaler Leistungsbeschreibung.</p>
+          <p class="separat">Grundstück, Planung und Genehmigungen, externe Anschlüsse, Außenanlagen, Möbel, Einbaugeräte und individuelle Extras werden separat kalkuliert.</p>
+        </div>
+        <div class="section-cta">
+          <a href="#anfrage" class="btn btn-primary" data-cta="allinone_planen">Mein Haus aus einer Hand planen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="interior" id="interior" aria-labelledby="interior-heading">
+      <div class="container interior-grid">
+        <div class="interior-text">
+          <h2 id="interior-heading">Nicht nur gebaut. Für Sie eingerichtet.</h2>
+          <p class="lead">Auf Wunsch planen wir Interior, Küche, Bad, Licht und Möbel als ein stimmiges Gesamtkonzept.</p>
+          <ul class="interior-list">
+            <li>Innenarchitektur</li>
+            <li>Italienische Türen und Möbel</li>
+            <li>Boden, Decke und Licht</li>
+            <li>Sanitär</li>
+            <li>Lieferung und Montage</li>
+          </ul>
+          <p class="materials">Zum Beispiel italienische Innentüren, pflegeleichter Klick-Vinyl oder Laminat für Fußbodenheizung sowie Spanndecken mit integrierter Beleuchtung.</p>
+          <p class="emotion">Sie öffnen die Tür — und Ihr Zuhause ist bereit.</p>
+          <a href="#anfrage" class="btn btn-primary" data-cta="interior_konzept">Mein Einrichtungskonzept anfragen</a>
+          <p class="note">Möbel können je nach Partner, Auswahl, finaler Freigabe, Verfügbarkeit und Logistik in ca. 40–50 Tagen geliefert und montiert werden.</p>
+        </div>
+        <figure class="interior-fig">
+          <img src="images/interior.png" alt="Fertig eingerichteter Wohnraum" width="1448" height="1086" loading="lazy" decoding="async">
+          <figcaption>Interior-Visualisierung</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="energy" id="energie" aria-labelledby="energy-heading">
+      <div class="container">
+        <h2 id="energy-heading">Heute effizient bauen. Monat für Monat sparen.</h2>
+        <div class="energy-grid">
+          <article class="energy-card">
+            <h3>Energie</h3>
+            <p>Eine gut gedämmte, luftdichte Gebäudehülle kann den Heiz- und Kühlbedarf senken. Eine Luft-Wasser-Wärmepumpe mit wassergeführter Fußbodenheizung sorgt für gleichmäßige Wärme und lässt sich raumweise regeln. Photovoltaik, Speicher und Wallbox sind projektbezogene Optionen.</p>
+          </article>
+          <article class="energy-card">
+            <h3>Langfristige Wertigkeit</h3>
+            <p>Niedrigere Betriebskosten können über viele Jahre einen spürbaren Teil der Investition auffangen. Wir erstellen auf Wunsch eine Langzeitbetrachtung mit nachvollziehbaren Annahmen.</p>
+          </article>
+          <article class="energy-card">
+            <h3>Finanzierung</h3>
+            <p>Wir strukturieren den Finanzierungsbedarf und prüfen mit Fachpartnern, welche aktuellen Förderkredite grundsätzlich infrage kommen.</p>
+          </article>
+          <article class="energy-card">
+            <h3>Potenzial durch Miete</h3>
+            <p>Auf Wunsch planen wir Einliegerwohnung, Ferienbungalow oder Vermietungskonzept mit — damit die Immobilie zusätzliches Ertragspotenzial erhält.</p>
+          </article>
+        </div>
+        <div class="section-cta">
+          <a href="#anfrage" class="btn btn-primary" data-cta="energy_check">Energie- und Finanzierungs-Check anfragen</a>
+        </div>
+        <p class="note">Verbrauch, Ersparnis, Förderung und Einnahmen sind projektabhängig und nicht garantiert. Förderfähigkeit vor Vorhabenbeginn prüfen.</p>
+      </div>
+    </section>
+
+    <section class="steps" id="ablauf" aria-labelledby="steps-heading">
+      <div class="container">
+        <h2 id="steps-heading">In vier Schritten zu Ihrem Zuhause.</h2>
+        <ol class="steps-list">
+          <li>
+            <span class="step-num">1</span>
+            <h3>Haus-Check</h3>
+            <p>Wünsche, Grundstück, Budget und Zeitrahmen klären.</p>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <h3>Planung</h3>
+            <p>Grundriss, Ausstattung, Fachplanung und klares Angebot abstimmen.</p>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <h3>Produktion & Bau</h3>
+            <p>Elemente vorfertigen, Baustelle vorbereiten und Haus montieren.</p>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <h3>Übergabe</h3>
+            <p>Technik prüfen, Ausstattung abschließen und Schlüssel übergeben.</p>
+          </li>
+        </ol>
+        <div class="trust-list" role="list">
+          <span role="listitem">Persönlicher Ansprechpartner</span>
+          <span role="listitem">Klare Leistungsbeschreibung</span>
+          <span role="listitem">Fotodokumentation</span>
+          <span role="listitem">5 Jahre Garantie auf ausgeführte Arbeiten*</span>
+          <span role="listitem">Herstellergarantien je Produkt, teilweise bis 25 Jahre*</span>
+        </div>
+        <p class="note">Die ca. 3 Monate beziehen sich auf die vereinbarte Bauphase ab Baustart — nicht auf Grundstückssuche, Planung oder Genehmigungsverfahren. *Garantieumfang gemäß Bauvertrag und Bedingungen des jeweiligen Herstellers.</p>
+        <div class="section-cta">
+          <a href="#anfrage" class="btn btn-primary" data-cta="ablauf_gespraech">Erstgespräch vereinbaren</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-form" id="anfrage" aria-labelledby="faq-heading">
+      <div class="container faq-form-grid">
+        <div class="faq">
+          <h2 id="faq-heading">Wie könnte Ihr Haus aussehen?</h2>
+          <p class="lead">Erhalten Sie eine erste Einschätzung zu Modell, Preis, Energieoptionen und nächstem Schritt.</p>
+          <div class="faq-list" role="region" aria-label="Häufige Fragen">
+            <details>
+              <summary aria-expanded="false">Sind 3 Monate realistisch?</summary>
+              <p>Ja, für die definierte Bauphase ab Baustart, wenn Planung, Genehmigungen, Grundstück, Baustelle, Ausführung und Zahlungsvoraussetzungen geklärt sind.</p>
+            </details>
+            <details>
+              <summary aria-expanded="false">Was ist im Richtpreis enthalten?</summary>
+              <p>Vorgesehen sind das Haus ab Fundament bis Ausbau mit Fenster, Türen, Fassade, Elektro, Wasser/Abwasser, Wärmepumpe, Fußbodenheizung und Basissanitär. Grundstück, Planung/Genehmigungen, externe Anschlüsse, Außenanlagen, Möbel, Geräte und Extras separat. Maßgeblich ist die bestätigte Leistungsbeschreibung.</p>
+            </details>
+            <details>
+              <summary aria-expanded="false">Kann ich Grundriss und Ausstattung ändern?</summary>
+              <p>Ja. Grundriss, Dach, Fassade, Tür, Fenster und Ausstattung werden individuell abgestimmt; technische Änderungen werden geprüft.</p>
+            </details>
+            <details>
+              <summary aria-expanded="false">Ist ein SIP-Haus sicher und langlebig?</summary>
+              <p>Entscheidend ist der geprüfte Gesamtaufbau mit Statik, Brand-, Schall-, Wärme- und Feuchteschutz. Für ausgeführte Arbeiten sind 5 Jahre Garantie vorgesehen; Produktgarantien richten sich nach dem Hersteller und können teilweise bis zu 25 Jahre betragen.</p>
+            </details>
+            <details>
+              <summary aria-expanded="false">Gibt es Finanzierung oder Förderung?</summary>
+              <p>Wir helfen, den Bedarf zu strukturieren und aktuelle Fördermöglichkeiten vor Vorhabenbeginn mit Fachpartnern zu prüfen.</p>
+            </details>
+          </div>
+        </div>
+
+        <form class="final-form" id="final-form" action="/api/submit" method="post" novalidate>
+          <h2 class="form-title">Kostenlose Ersteinschätzung erhalten</h2>
+          <fieldset class="form-step">
+            <legend>Was planen Sie?</legend>
+            <div class="radio-group">
+              <label class="radio"><input type="radio" name="groesse" value="120 m²" required><span>120 m²</span></label>
+              <label class="radio"><input type="radio" name="groesse" value="160 m²" required><span>160 m²</span></label>
+              <label class="radio"><input type="radio" name="groesse" value="220 m²" required><span>220 m²</span></label>
+              <label class="radio"><input type="radio" name="groesse" value="Individuell" required><span>Individuell</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step">
+            <legend>Grundstück</legend>
+            <div class="radio-group">
+              <label class="radio"><input type="radio" name="grundstueck" value="Vorhanden" required><span>Vorhanden</span></label>
+              <label class="radio"><input type="radio" name="grundstueck" value="In Suche" required><span>In Suche</span></label>
+              <label class="radio"><input type="radio" name="grundstueck" value="Beratung gewünscht" required><span>Beratung gewünscht</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step">
+            <legend>Wichtig für mich</legend>
+            <div class="checkbox-group">
+              <label class="checkbox"><input type="checkbox" name="interesse" value="Schlüsselfertig"><span>Schlüsselfertig</span></label>
+              <label class="checkbox"><input type="checkbox" name="interesse" value="Interior"><span>Interior</span></label>
+              <label class="checkbox"><input type="checkbox" name="interesse" value="Energie"><span>Energie</span></label>
+              <label class="checkbox"><input type="checkbox" name="interesse" value="Finanzierung"><span>Finanzierung</span></label>
+              <label class="checkbox"><input type="checkbox" name="interesse" value="Vermietung"><span>Vermietung</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="form-step contact-fields">
+            <legend>Kontakt</legend>
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" required>
+            <label for="f-plz">PLZ</label>
+            <input type="text" id="f-plz" name="plz" inputmode="numeric" pattern="\d{5}" required>
+            <label for="f-telefon">Telefon</label>
+            <input type="tel" id="f-telefon" name="telefon">
+            <label for="f-email">E-Mail</label>
+            <input type="email" id="f-email" name="email">
+          </fieldset>
+          <label class="consent">
+            <input type="checkbox" name="zustimmung" value="ja" required>
+            <span>Ich stimme der Verarbeitung meiner Angaben zur Kontaktaufnahme gemäß Datenschutzerklärung zu.</span>
+          </label>
+          <input type="hidden" name="source" value="Finale Form">
+          <input type="hidden" name="utm" class="utm-field">
+          <input type="hidden" name="url" class="url-field">
+          <button type="submit" class="btn btn-primary" data-cta="final_form_submit" id="final-submit">Kostenlose Ersteinschätzung erhalten</button>
+          <p class="form-message" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div id="impressum">
+          <h3>Impressum</h3>
+          <p>SHVETS BAU GmbH<br>Mühlengasse 8<br>91332 Heiligenstadt i.OFr.</p>
+          <p>Geschäftsführer: Yevhenii Shvets<br>HRB 11254, Amtsgericht Bamberg<br>USt-IdNr. DE361656866</p>
+          <p><a href="tel:+4915110173628" data-cta="phone_click_footer">+49 151 10173628</a><br><a href="mailto:oberfrankenbau@gmail.com" data-cta="email_click">oberfrankenbau@gmail.com</a></p>
+        </div>
+        <div id="datenschutz">
+          <h3>Datenschutz</h3>
+          <p>Die Datenschutzerklärung wird vor der Veröffentlichung durch den zuständigen deutschen Fachmann ergänzt.</p>
+          <button type="button" class="text-link" id="open-cookie-settings">Cookie-Einstellungen öffnen</button>
+        </div>
+      </div>
+      <p class="copyright">© SHVETS BAU GmbH. Alle Angaben ohne Gewähr; rechtsverbindliche Daten im finalen Angebot.</p>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <div class="cookie-inner container">
+      <p>Wir verwenden nur technisch notwendige Cookies. Für Analyse- und Marketing-Cookies benötigen wir Ihre Zustimmung.</p>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-secondary" id="cookies-necessary">Nur notwendige</button>
+        <button type="button" class="btn btn-primary" id="cookies-accept">Alle akzeptieren</button>
+        <button type="button" class="text-link" id="cookies-settings">Einstellungen</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-cta" aria-hidden="true">
+    <a href="#anfrage" class="btn btn-primary" data-cta="mobile_fixed_cta">Kostenlosen Haus-Check starten</a>
+  </div>
+
+  <a href="https://wa.me/4915110173628" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener" data-cta="whatsapp_click">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.56 12.56 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.56 12.56 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+</body>
+</html>
