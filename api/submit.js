@@ -18,8 +18,8 @@ module.exports = (req, res) => {
     return;
   }
 
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+  const token = (process.env.TELEGRAM_BOT_TOKEN || '').trim();
+  const chatId = (process.env.TELEGRAM_CHAT_ID || '').trim();
 
   let body = '';
   req.on('data', chunk => { body += chunk; });
@@ -55,7 +55,7 @@ module.exports = (req, res) => {
 
       const intArr = Array.isArray(interesse) ? interesse.join(', ') : interesse;
       const text = [
-        '*Neue Haus-Anfrage*',
+        'Neue Haus-Anfrage',
         `Quelle: ${source}`,
         `Größe: ${groesse || '-'}`,
         `Grundstück: ${grundstueck || '-'}`,
@@ -75,7 +75,7 @@ module.exports = (req, res) => {
         return;
       }
 
-      const q = querystring.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' });
+      const q = querystring.stringify({ chat_id: chatId, text });
       const tReq = https.request(
         `https://api.telegram.org/bot${token}/sendMessage?${q}`,
         { method: 'GET' },
