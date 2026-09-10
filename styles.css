@@ -65,7 +65,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247,245,242,0.96);
+  background: rgba(255,255,255,0.98);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -78,11 +78,20 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--graphite);
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  text-decoration: none;
-  color: var(--graphite);
+}
+
+.logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+  border-radius: 12px;
 }
 
 .main-nav { display: none; gap: 24px; align-items: center; }
