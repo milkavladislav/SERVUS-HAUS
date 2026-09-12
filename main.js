@@ -68,6 +68,15 @@
   if (acceptCookies) acceptCookies.addEventListener('click', () => setConsent('all'));
   if (necessaryCookies) necessaryCookies.addEventListener('click', () => setConsent('necessary'));
 
+  const successDialog = $('#success-dialog');
+  const successDialogClose = $('#success-dialog-close');
+  if (successDialog && successDialogClose) {
+    successDialogClose.addEventListener('click', () => successDialog.close());
+    successDialog.addEventListener('click', (e) => {
+      if (e.target === successDialog) successDialog.close();
+    });
+  }
+
   function handleForm(form) {
     if (!form) return;
     const message = form.querySelector('.form-message');
@@ -116,6 +125,7 @@
         }
         form.reset();
         setUtmAndUrl();
+        if (successDialog) successDialog.showModal();
       } catch (err) {
         if (message) {
           message.textContent = 'Das hat leider nicht geklappt. Bitte versuchen Sie es erneut oder rufen Sie uns an.';
