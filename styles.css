@@ -296,7 +296,10 @@ h3 { font-size: 1.25rem; color: var(--graphite); }
 .faq-list p { padding: 0 0 20px; color: var(--muted); font-size: .95rem; }
 
 .final-form { padding: 32px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; background: linear-gradient(145deg, #18283D, #24394E); box-shadow: 0 24px 56px rgba(26,35,56,.2); }
-.form-title { margin-bottom: 28px; color: #fff; font-size: 1.55rem; }
+.form-title { margin-bottom: 8px; color: #fff; font-size: 1.55rem; }
+.required-note { margin-bottom: 24px; color: #BAC4CE; font-size: .82rem; }
+.required-mark, .required-note span { color: #E9B95F; font-weight: 800; }
+.form-hint { color: #BAC4CE; font-size: .82rem; font-weight: 400; }
 .form-step { border: 0; padding: 0; margin: 0 0 26px; }
 .form-step legend { margin-bottom: 12px; color: #fff; font-weight: 700; }
 .radio-group, .checkbox-group { display: flex; flex-wrap: wrap; gap: 9px; }

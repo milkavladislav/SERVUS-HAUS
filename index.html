@@ -322,8 +322,9 @@
 
         <form class="final-form" id="final-form" action="/api/submit" method="post" novalidate>
           <h2 class="form-title">Kostenlose Ersteinschätzung erhalten</h2>
+          <p class="required-note"><span aria-hidden="true">*</span> Pflichtfelder</p>
           <fieldset class="form-step">
-            <legend>Was planen Sie?</legend>
+            <legend>Was planen Sie? <span class="required-mark" aria-hidden="true">*</span></legend>
             <div class="radio-group">
               <label class="radio"><input type="radio" name="groesse" value="120 m²" required><span>120 m²</span></label>
               <label class="radio"><input type="radio" name="groesse" value="160 m²" required><span>160 m²</span></label>
@@ -332,7 +333,7 @@
             </div>
           </fieldset>
           <fieldset class="form-step">
-            <legend>Grundstück</legend>
+            <legend>Grundstück <span class="required-mark" aria-hidden="true">*</span></legend>
             <div class="radio-group">
               <label class="radio"><input type="radio" name="grundstueck" value="Vorhanden" required><span>Vorhanden</span></label>
               <label class="radio"><input type="radio" name="grundstueck" value="In Suche" required><span>In Suche</span></label>
@@ -350,10 +351,10 @@
             </div>
           </fieldset>
           <fieldset class="form-step contact-fields">
-            <legend>Kontakt</legend>
-            <label for="f-name">Name</label>
+            <legend>Kontakt <span class="required-mark" aria-hidden="true">*</span> <span class="form-hint">(Telefon oder E-Mail)</span></legend>
+            <label for="f-name">Name <span class="required-mark" aria-hidden="true">*</span></label>
             <input type="text" id="f-name" name="name" required>
-            <label for="f-plz">PLZ</label>
+            <label for="f-plz">PLZ <span class="required-mark" aria-hidden="true">*</span></label>
             <input type="text" id="f-plz" name="plz" inputmode="numeric" pattern="\d{5}" required>
             <label for="f-telefon">Telefon</label>
             <input type="tel" id="f-telefon" name="telefon">
@@ -362,7 +363,7 @@
           </fieldset>
           <label class="consent">
             <input type="checkbox" name="zustimmung" value="ja" required>
-            <span>Ich stimme der Verarbeitung meiner Angaben zur Kontaktaufnahme gemäß Datenschutzerklärung zu.</span>
+            <span>Ich stimme der Verarbeitung meiner Angaben zur Kontaktaufnahme gemäß Datenschutzerklärung zu. <span class="required-mark" aria-hidden="true">*</span></span>
           </label>
           <input type="hidden" name="source" value="Finale Form">
           <input type="hidden" name="utm" class="utm-field">
