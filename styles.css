@@ -109,6 +109,7 @@ img { max-width: 100%; height: auto; display: block; }
   cursor: pointer;
 }
 .menu-toggle span { display: block; width: 100%; height: 3px; background: var(--graphite); border-radius: 2px; }
+.header-phone { display: flex; align-items: center; gap: 6px; margin-left: 6px; margin-right: auto; font-weight: 600; font-size: .85rem; color: var(--graphite); text-decoration: none; white-space: nowrap; }
 
 .mobile-menu {
   position: absolute;
@@ -152,7 +153,8 @@ h3 { font-size: 1.25rem; color: var(--graphite); }
 .hero-image .image-label { position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.55); color: #fff; font-size: .75rem; padding: 4px 8px; border-radius: 4px; }
 
 .hero h1 { margin-top: 8px; }
-.hero-sub { margin-top: 16px; font-size: 1.2rem; color: var(--muted); }
+.hero-sub { margin-top: 16px; font-size: 1.2rem; color: var(--muted); padding-left: 24px; list-style: disc; }
+.hero-sub li { margin-bottom: 4px; }
 .hero-bullets { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; font-weight: 500; }
 .hero-bullets li { position: relative; padding-left: 16px; }
 .hero-bullets li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
@@ -260,6 +262,7 @@ h3 { font-size: 1.25rem; color: var(--graphite); }
 .site-footer a:hover { text-decoration: underline; }
 .footer-grid { display: grid; gap: 32px; }
 .copyright { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); font-size: .85rem; color: #9BA3B0; }
+.footer-footnote { margin-top: 16px; font-size: .75rem; color: #9BA3B0; line-height: 1.4; }
 
 .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--surface); border-top: 1px solid var(--line); padding: 16px 0; box-shadow: 0 -4px 16px rgba(0,0,0,0.08); z-index: 110; }
 .cookie-banner[hidden] { display: none; }
@@ -275,6 +278,7 @@ h3 { font-size: 1.25rem; color: var(--graphite); }
   body { font-size: 18px; }
   .main-nav { display: flex; }
   .menu-toggle { display: none; }
+  .header-phone { display: none; }
   .mobile-cta { display: none; }
   .hero-grid { grid-template-columns: 1fr 1fr; align-items: center; }
   .hero-content { order: 1; }
