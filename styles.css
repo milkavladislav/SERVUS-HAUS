@@ -155,7 +155,7 @@ h3 { font-size: 1.25rem; color: var(--graphite); }
 .lead { margin-top: 12px; font-size: 1.15rem; color: var(--muted); max-width: 680px; }
 .note { margin-top: 16px; font-size: .85rem; color: var(--muted); line-height: 1.45; }
 
-.hero { min-height: 680px; padding: 0; background: linear-gradient(90deg, rgba(10, 24, 39, .88) 0%, rgba(10, 24, 39, .68) 38%, rgba(10, 24, 39, .08) 72%), url("Фото/Gemini_Generated_Image_4lzpzb4lzpzb4lzp.jpeg") center / cover no-repeat; }
+.hero { min-height: 680px; padding: 0; background: linear-gradient(90deg, rgba(10, 24, 39, .88) 0%, rgba(10, 24, 39, .68) 38%, rgba(10, 24, 39, .08) 72%), url("images/Gemini_Generated_Image_4lzpzb4lzpzb4lzp.jpeg") center / cover no-repeat; }
 .hero + .sip { padding-top: 20px; }
 .hero-inner { position: relative; display: flex; min-height: 680px; align-items: center; padding: 64px 0 120px; }
 .hero-content { max-width: 690px; color: #fff; }
@@ -408,7 +408,7 @@ h3 { font-size: 1.25rem; color: var(--graphite); }
   .interior-text { padding: 24px; }
   .interior-text h2::after { margin-right: auto; margin-left: auto; }
   .interior-text .btn { width: 100%; text-align: center; }
-  .hero { min-height: max(720px, calc(100svh - 63px)); background: linear-gradient(180deg, rgba(7, 25, 43, .18) 0%, transparent 55%, rgba(7, 20, 32, .48) 100%), url("Фото/Gemini_Generated_Image_4wvops4wvops4wvo.jpeg") center / cover no-repeat; }
+  .hero { min-height: max(720px, calc(100svh - 63px)); background: linear-gradient(180deg, rgba(7, 25, 43, .18) 0%, transparent 55%, rgba(7, 20, 32, .48) 100%), url("images/Gemini_Generated_Image_4wvops4wvops4wvo.jpeg") center / cover no-repeat; }
   .hero-inner { min-height: max(720px, calc(100svh - 63px)); align-items: flex-start; padding: 64px 0 120px; }
   .hero-content { max-width: none; }
   .hero .kicker { margin-bottom: 20px; font-size: clamp(.74rem, 3.5vw, .95rem); letter-spacing: .17em; }
