@@ -143,15 +143,16 @@
   handleForm($('#short-form'));
   handleForm($('#final-form'));
 
-  const fPhone = $('#f-telefon');
+  const fPhoneMobil = $('#f-telefon-mobil');
   const fEmail = $('#f-email');
-  if (fPhone && fEmail) {
+  if (fPhoneMobil && fEmail) {
     const validateContact = () => {
-      const has = fPhone.value.trim() || fEmail.value.trim();
-      fPhone.required = !fEmail.value.trim();
-      fEmail.required = !fPhone.value.trim();
+      const hasPhone = fPhoneMobil.value.trim();
+      const hasEmail = fEmail.value.trim();
+      fPhoneMobil.required = !hasEmail;
+      fEmail.required = !hasPhone;
     };
-    fPhone.addEventListener('input', validateContact);
+    fPhoneMobil.addEventListener('input', validateContact);
     fEmail.addEventListener('input', validateContact);
     validateContact();
   }

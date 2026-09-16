@@ -30,6 +30,7 @@ module.exports = (req, res) => {
         name = '',
         plz = '',
         telefon = '',
+        telefon_mobil = '',
         email = '',
         groesse = '',
         grundstueck = '',
@@ -46,7 +47,7 @@ module.exports = (req, res) => {
         return;
       }
 
-      const contact = email || telefon || kontakt || '';
+      const contact = email || telefon || telefon_mobil || kontakt || '';
       if (!contact) {
         res.statusCode = 400;
         res.end(JSON.stringify({ error: 'Kontaktdaten erforderlich' }));
@@ -63,6 +64,7 @@ module.exports = (req, res) => {
         `Name: ${name || '-'}`,
         `PLZ: ${plz || '-'}`,
         `Telefon: ${telefon || '-'}`,
+        `Telefon (Mobil für Messenger): ${telefon_mobil || '-'}`,
         `E-Mail: ${email || '-'}`,
         `Kontakt: ${kontakt || '-'}`,
         `UTM: ${utm || '-'}`,
