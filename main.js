@@ -2,9 +2,12 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
+  // Testumgebung: keine echten Anfragen senden (nur Produktion sendet an /api/submit)
+  const PROD_HOSTS = ['servushaus.de', 'www.servushaus.de', 'servus-haus-eight.vercel.app'];
+  const IS_TEST = !PROD_HOSTS.includes(window.location.hostname);
+
   function track(name, params = {}) {
     if (typeof gtag === 'function') gtag('event', name, params);
-    if (window.console) console.log('[track]', name, params);
   }
 
   function setUtmAndUrl() {
@@ -24,8 +27,6 @@
       if (size) {
         const radio = $(`input[name="groesse"][value="${size}"]`);
         if (radio) radio.checked = true;
-        const select = $('#sf-groesse');
-        if (select) select.value = size;
       }
     });
   });
@@ -35,8 +36,17 @@
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener('click', () => {
       const open = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !open);
+      menuToggle.setAttribute('aria-expanded', String(!open));
+      menuToggle.setAttribute('aria-label', open ? 'Menü öffnen' : 'Menü schließen');
       mobileMenu.hidden = open;
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.hidden) {
+        mobileMenu.hidden = true;
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Menü öffnen');
+        menuToggle.focus();
+      }
     });
     $$('#mobile-menu a').forEach(a => a.addEventListener('click', () => {
       menuToggle.setAttribute('aria-expanded', 'false');
@@ -46,27 +56,9 @@
 
   $$('details').forEach(d => {
     d.addEventListener('toggle', () => {
-      const summary = d.querySelector('summary');
-      summary.setAttribute('aria-expanded', d.open);
       track('faq_toggle', { open: d.open });
     });
   });
-
-  const cookieBanner = $('#cookie-banner');
-  const openCookieBtn = $('#open-cookie-settings');
-  const acceptCookies = $('#cookies-accept');
-  const necessaryCookies = $('#cookies-necessary');
-  const settingsCookies = $('#cookies-settings');
-
-  function getConsent() { return localStorage.getItem('sh_consent'); }
-  function setConsent(v) { localStorage.setItem('sh_consent', v); cookieBanner.hidden = true; }
-  function showConsent() { cookieBanner.hidden = false; }
-
-  if (!getConsent()) showConsent();
-  if (openCookieBtn) openCookieBtn.addEventListener('click', showConsent);
-  if (settingsCookies) settingsCookies.addEventListener('click', showConsent);
-  if (acceptCookies) acceptCookies.addEventListener('click', () => setConsent('all'));
-  if (necessaryCookies) necessaryCookies.addEventListener('click', () => setConsent('necessary'));
 
   const successDialog = $('#success-dialog');
   const successDialogClose = $('#success-dialog-close');
@@ -112,6 +104,17 @@
       }
 
       try {
+        if (IS_TEST) {
+          await new Promise(r => setTimeout(r, 300));
+          if (message) {
+            message.textContent = 'Testmodus: Anfrage wurde NICHT gesendet.';
+            message.classList.add('success');
+          }
+          form.reset();
+          setUtmAndUrl();
+          if (successDialog) successDialog.showModal();
+          return;
+        }
         const res = await fetch(form.action, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -140,7 +143,6 @@
     });
   }
 
-  handleForm($('#short-form'));
   handleForm($('#final-form'));
 
   const fPhoneMobil = $('#f-telefon-mobil');
